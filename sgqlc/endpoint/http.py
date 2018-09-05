@@ -146,7 +146,7 @@ class HTTPEndpoint(BaseEndpoint):
 
         self.logger.debug('Query:\n%s', query)
 
-        target = f'{self.url}?query={urllib.parse.quote_plus(query)}'
+        target = f'{self.url}/?query={urllib.parse.quote_plus(query)}'
         req = urllib.request.Request(
             url=target, data=post_data, headers=headers)
         try:
